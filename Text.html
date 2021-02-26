@@ -1,0 +1,21 @@
+<p id='dd'>0</p>
+<input id='in1' type='text' placeholder="text">
+<input onclick="func()" value="+" type="button">
+<script>
+    let dd1 = document.getElementById("dd");
+    let i = 0;
+    let t = '';
+    let in_1 = document.getElementById("in1");
+
+function func() { 
+    dd1.innerHTML = "";
+    setTimeout(function gg1() {
+    if (i < in_1.value.length) {
+	func();
+    t = t + in_1.value[i];
+    dd1.innerHTML = t;
+    i++;
+	}
+}, 100)
+}
+</script>
