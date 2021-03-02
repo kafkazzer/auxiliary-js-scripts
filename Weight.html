@@ -1,0 +1,31 @@
+<div id='block' style="width: 150px; height: 150px; background: #333; position: absolute; left:250px; top:250px;"></div>
+<input onclick="func()" value="Размер" type="button">
+   <script>
+          let i = 150;
+	let bb = document.getElementById("block");
+
+function func() {
+   setTimeout(function gg1() {
+   i=i+1;
+   bb.style.width = i;
+   bb.style.height = i;
+	i=i+1;
+	if (i < 250) {  //до куда
+	func();
+	}
+}, 10)
+   if(i == 248){ //стоп
+   setTimeout(fun1(), 10);
+   }
+}
+function fun1() {
+   setTimeout(function gg() {
+   i=i-1;
+   bb.style.width = i;
+   bb.style.height = i;
+      if (i > 150) {
+        fun1();
+      }
+   }, 10)
+}
+</script>
