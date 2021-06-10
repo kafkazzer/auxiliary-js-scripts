@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+   body{
+      margin: 55px;
+      padding: 0px;
+   }
+   </style>
+</head>
+<body>
+<div>
+<div id='body' style="border-radius: 100%; width: 250px; height: 250px; border: 15px solid black;"></div>
+</div>
+</body>
+<script>
+   let body_id = document.getElementById("body");
+   let r = 0;
+   let g = 0;
+   let b = 0;
+   function getRandomInRange(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+   }
+   function generate_color(){
+      r_body = getRandomInRange(0, 255);
+      g_body = getRandomInRange(0, 255);
+      b_body = getRandomInRange(0, 255);
+      body_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
+      arm1_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
+      arm2_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
+      leg1_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
+      leg2_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
+   }
+   generate_color();
+   </script>
+</html>
