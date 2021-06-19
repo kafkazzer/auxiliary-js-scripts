@@ -1,0 +1,21 @@
+<p id='dd'>0</p>
+<input id='in1' type='text'placeholder="number">
+<input onclick="pre()" value="+" type="button" >
+<script>
+    let dd1 = document.getElementById("dd");
+    let i = 0;
+    let t = 0;
+    let in_1 = document.getElementById("in1");
+function pre(){ //Обнуляю переменные
+    i = 0;
+    t = in_1.value;
+    func();
+}
+function func() {      
+    setTimeout(function gg1() {
+	i++; //Увеличение числа
+    dd1.innerHTML = i; //Задача числа
+    if (i < t) {func();} //Повтор  
+}, 25) //Скорость
+}
+</script>
