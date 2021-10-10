@@ -15,9 +15,9 @@
 </body>
 <script>
    let body_id = document.getElementById("body");
-   let r = 0;
-   let g = 0;
-   let b = 0;
+   let r_body = 0;
+   let g_body = 0;
+   let b_body = 0;
    function getRandomInRange(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
    }
@@ -26,10 +26,6 @@
       g_body = getRandomInRange(0, 255);
       b_body = getRandomInRange(0, 255);
       body_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
-      arm1_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
-      arm2_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
-      leg1_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
-      leg2_id.style.background = 'rgb('+r_body+','+g_body+','+b_body+')';
    }
    generate_color();
    </script>
